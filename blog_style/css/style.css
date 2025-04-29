@@ -34,6 +34,13 @@ header nav ul.main {
   gap: 3rem;
   margin-top: 3rem;
 }
+header nav ul li {
+  padding: 5px 1rem;
+}
+header nav ul li:hover {
+  background-color: #888;
+  padding: 5px 1rem;
+}
 
 section#banner {
   height: 80vh;

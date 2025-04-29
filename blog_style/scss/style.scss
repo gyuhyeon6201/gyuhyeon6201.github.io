@@ -1,6 +1,6 @@
 @charset "utf-8";
 $main-font: #333;
-$sub-fon: #888;
+$sub-font: #888;
 
 body{
     font-family: 'Paperlogy', sans-serif;
@@ -19,7 +19,7 @@ header{
             justify-content: flex-end;
             gap: 2rem;
             &.top{
-                color: $sub-fon;
+                color: $sub-font;
                 font-size: 0.7rem;
                 // margin-top: 1rem;
             }
@@ -27,6 +27,13 @@ header{
                 font-weight: 600;
                 gap: 3rem;
                 margin-top: 3rem;
+            }
+            li{
+                padding: 5px 1rem;
+                &:hover{
+                    background-color: #888;
+                    padding: 5px 1rem;
+                }
             }
         }
     }
