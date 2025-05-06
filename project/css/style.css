@@ -303,7 +303,7 @@ footer nav ul li {
 }
 footer nav ul li:last-child {
   border: none;
-  margin: 2rem;
+  margin-right: 2rem;
   margin-top: none;
 }
 @media screen and (max-width: 768px) {
