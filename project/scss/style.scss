@@ -33,14 +33,14 @@ header {
             height: 100%;
             @include mobile{
                 width: 200px;
-                padding: 5px 0;
+                margin: 5px 0;
             }
         }
         .menu-icon {
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
-            padding-right: 1rem;
+            margin-right: 1rem;
             @include mobile{
                 display: block;
             }

@@ -15,14 +15,14 @@ header #top img {
 @media screen and (max-width: 768px) {
   header #top img {
     width: 200px;
-    padding: 5px 0;
+    margin: 5px 0;
   }
 }
 header #top .menu-icon {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
-  padding-right: 1rem;
+  margin-right: 1rem;
 }
 @media screen and (max-width: 768px) {
   header #top .menu-icon {
