@@ -31,16 +31,26 @@ header {
         img {
             width: 250px;
             height: 100%;
+            @include mobile{
+                width: 200px;
+                padding: 5px 0;
+            }
         }
         .menu-icon {
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
+            padding-right: 1rem;
+            @include mobile{
+                display: block;
+            }
         }
         ul {
             font-size: 1.2rem;
             @include flex(flex-end, center);
-            // gap: 3rem;
+            @include mobile{
+                display: none;
+            }
             li {
                 padding: 0.3rem 3rem;
                 // border: 1px solid #222;
@@ -61,12 +71,18 @@ header {
         color: $white-font;
         background-color: $main-color;
         position: relative;
+        @include mobile{
+            padding: 8rem 5rem;
+        }
         img {
             width: 60%;
             position: absolute;
             right: 6%;
             top: 50%;
             transform: translateY(-50%);
+            @include mobile{
+                right: 3%;
+            }
         }
         div {
             h1,
@@ -74,6 +90,10 @@ header {
             button {
                 position: relative;
                 z-index: 3;
+            }
+            h1,
+            p{
+                text-shadow: 1px 1px 5px $font-color;
             }
             p {
                 width: 100%;
@@ -94,6 +114,19 @@ header {
                     background-color: $dark-color;
                 }
             }
+            @include mobile{
+                h1{
+                    font-size: 1.9rem;
+                }
+                p{
+                    font-size: 1.2rem;
+                }
+                button{
+                    width: 150px;
+                    height: 40px;
+                    font-size: 1rem;
+                }
+            }
         }
     }
 }
@@ -106,9 +139,18 @@ section#function {
         margin: 2.5rem auto;
         @include flex();
         gap: 5rem;
+        @include mobile{
+            flex-direction: column;
+            margin: 1rem auto;
+            gap: 0;
+        }
         li {
             font-size: 1.2rem;
             @include flex(space-between,center);
+            @include mobile{
+                font-size: 1rem;
+                width: 75%;
+            }
             flex: 1;
             border: 1px solid #b0b0b0;
             border-radius: 20px;
@@ -120,8 +162,8 @@ section#function {
                 position: absolute;
                 right: 30px;
                 bottom: 30px;
-                width: 50px;
-                height: 50px;
+                width: 40px;
+                height: 40px;
             }
         }
     }
@@ -136,11 +178,16 @@ section#apply {
         border-top: 2px solid $dark-color;
         padding-top: 3rem;
         text-align: center;
-        // padding
+        @include mobile{
+            padding-bottom: 2rem
+        }
     }
     ul {
         @include flex();
         text-align: center;
+        @include mobile{
+            flex-direction: column;
+        }
         li {
             font-size: 1.2rem;
             margin: 1.5rem 1.5rem;
@@ -155,6 +202,9 @@ section#apply {
     }
     div {
         @include flex();
+        @include mobile{
+            flex-direction: column;
+        }
         button {
             margin: 1.5rem;
             color: $dark-color;
@@ -168,6 +218,10 @@ section#apply {
             box-shadow: 2px 2px 30px #ddd;
             &:hover{
                 background-color: $point-color;
+            }
+            @include mobile{
+                width: 200px;
+                font-size: 1.5rem;
             }
         }
     }
@@ -200,6 +254,9 @@ section#adver {
         text-shadow: 2px 2px 10px $font-color;
         font-size: 4rem;
         padding: 6rem 8rem;
+        @include mobile{
+            font-size: 1.8rem;
+        }
     }
 }
 
@@ -211,13 +268,23 @@ footer {
     nav {
         padding: 1rem 1.5rem;
         @include flex(space-between, center);
+        @include mobile{
+            flex-direction: column;
+        }
         img {
             width: 250px;
             height: 100%;
+            @include mobile{
+                width: 200px;
+                padding-bottom: 3rem;
+            }
         }
         ul {
             font-size: 1.2rem;
             @include flex(flex-end, center);
+            @include mobile{
+                flex-direction: column;
+            }
             li {
                 padding: 0 10px;
                 border-right: 2.5px solid #fff;
@@ -226,6 +293,13 @@ footer {
                     margin: 2rem;
                     margin-top: none;
                 }
+                @include mobile{
+                    border: none;
+                    padding: 0.5rem;
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
             }
         }
     }
@@ -233,115 +307,8 @@ footer {
         padding-top: 10rem;
         padding-bottom: 2rem;
         text-align: center;
-    }
-}
-
-
-
-
-// 반응형
-@include mobile{
-    // header
-    header {
-        #top {
-            margin: 0 1rem;
-            @include flex(space-between, center);
-
-            img {
-                width: 150px; // 로고 크기 축소
-            }
-
-            .menu-icon {
-                display: block; // 메뉴 아이콘 보이기
-            }
-
-            ul {
-                display: none; // 네비게이션 메뉴 숨기기
-            }
-        }
-    }
-
-    // 배너
-    .banner {
-        padding: 10rem 2rem; // 배너 패딩 축소
-        font-size: 1.5rem;
-        div {
-            text-align: center; // 텍스트 가운데 정렬
-            h1 {
-                font-size: 2rem; // 텍스트 크기 축소
-            }
-            p {
-                font-size: 1rem;
-            }
-            button {
-                width: 150px; // 버튼 크기 축소
-                height: 50px;
-                font-size: 1rem;
-            }
-        }
-    }
-
-    // 구성&설명 박스
-    section#function {
-        ul {
-            width: 90%; // 박스 너비 확장
-            gap: 2rem; // 간격 축소
-            li {
-                flex-direction: column; // 세로 정렬
-                padding: 2rem;
-                font-size: 1rem;
-
-                img {
-                    position: static; // 이미지 위치 초기화
-                    margin-top: 1rem;
-                    width: 40px; // 이미지 크기 축소
-                    height: 40px;
-                }
-            }
-        }
-    }
-
-    // 신청하기란
-    section#apply {
-        ul {
-            flex-direction: column; // 세로 정렬
-            li {
-                margin: 1rem 0; // 간격 조정
-                padding: 1rem;
-                font-size: 1rem;
-            }
-        }
-        div {
-            button {
-                width: 100%;
-                font-size: 1.2rem;
-            }
-        }
-    }
-
-    // 마지막 광고
-    section#adver {
-        h2 {
-            font-size: 1.8rem;
-            padding: 3rem 1rem;
-            text-align: center;
-        }
-    }
-
-    // 푸터
-    footer {
-        nav {
-            flex-direction: column;
-            img {
-                width: 150px;
-            }
-            ul {
-                flex-direction: column;
-                li {
-                    padding: 0.5rem 0;
-                    border: none;
-                }
-            }
+        @include mobile{
+            font-size: 0.8rem;
         }
     }
 }
