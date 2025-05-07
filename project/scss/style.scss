@@ -48,9 +48,9 @@ header {
         ul {
             font-size: 1.2rem;
             @include flex(flex-end, center);
-            @include mobile{
-                display: none;
-            }
+            // @include mobile{
+            //     display: none;
+            // }
             li {
                 padding: 0.3rem 3rem;
                 // border: 1px solid #222;
