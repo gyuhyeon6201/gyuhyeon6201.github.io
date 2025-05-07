@@ -54,19 +54,19 @@ header {
             @include flex(flex-end, center);
             @include mobile {
                 display: none;
-                // flex-direction: column;
+                flex-direction: column;
                 justify-content: center;
-                width: 100%;
-                height: 8rem;
+                width: 30%;
+                height: 25rem;
                 background-color: $point-color;
                 color: $white-font;
                 position: absolute;
                 top: 60px;
-                right: 0;
+                right: -5px;
                 z-index: 10;
                 padding: 10px 0;
                 border: 1px solid $main-color;
-                // border-radius: 20px;
+                border-radius: 20px;
             }
             li {
                 padding: 0.3rem 3rem;
@@ -79,12 +79,12 @@ header {
                     margin: 2rem;
                     font-size: 1.5rem;
                     @include mobile{
-                        margin: 0;
+                        margin: 1rem;
                     }
                 }
                 @include mobile {
                     position: relative;
-                    margin: 0 auto;
+                    margin: 10px auto;
                     z-index: 11;
                 }
             }
