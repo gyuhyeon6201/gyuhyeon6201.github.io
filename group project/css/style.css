@@ -15,6 +15,18 @@ header {
 header > h1 {
     padding: 2rem;
 }
+header>.title{
+    display: none;
+}
+header>.title>hr{
+    width: 30%;
+    margin-left: 2rem;
+    outline: none;
+    border: 2px solid #fff;
+}
+header>.title>p{
+    padding: 0.5rem 2rem;
+}
 
 /* main 영역 */
 main {
@@ -67,6 +79,7 @@ main>section{
     clear: both;
     display: flex;
     flex-direction: column;
+    /* align-items: flex-start; */
     gap: 1rem;
     margin: 4rem 0;
 }
@@ -79,6 +92,10 @@ article {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     color: #555;
 }
+/* article:nth-child(2n) img{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+} */
 article img {
     width: 100%;
 }
@@ -124,6 +141,9 @@ article p {
     header>h1{
         font-size: 3rm;
         padding-top: 10rem;
+    }
+    header>.title{
+        display: block;
     }
     main{
         padding: 3rem;
