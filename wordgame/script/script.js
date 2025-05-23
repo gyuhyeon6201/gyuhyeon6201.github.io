@@ -25,14 +25,17 @@ let addChat = (text) => {
     }
 
     // 현재 채팅박스에 들어갈 li의 개수
-    const maxChat = 13;
-    if (count >= maxChat) {
-        // 가장 첫번째 li 삭제
-        $chatBox.removeChild($chatBox.firstElementChild);
-    }
+    // const maxChat = 15;
+    // if (count >= maxChat) {
+    //     // 가장 첫번째 li 삭제
+    //     $chatBox.removeChild($chatBox.firstElementChild);
+    // }
     
     $wordList.textContent = text;
     $chatBox.appendChild($wordList);
+
+    // 채팅창을 항상 가장 아래로 스크롤
+    $chatBox.scrollTop = $chatBox.scrollHeight;
 };
 
 // 홈 화면에서 시작하기 버튼 클릭
