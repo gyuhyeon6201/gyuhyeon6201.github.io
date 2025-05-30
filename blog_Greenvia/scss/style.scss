@@ -159,17 +159,17 @@ header {
 // 구성&설명 박스
 section#function {
     ul {
-        width: 60%;
+        width: 50%;
         margin: 2.5rem auto;
         @include flex();
-        gap: 5rem;
+        gap: 1rem;
         @include mobile {
             flex-direction: column;
             margin: 1rem auto;
             gap: 0;
         }
         li {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             @include flex(space-between, center);
             @include mobile {
                 font-size: 1rem;
