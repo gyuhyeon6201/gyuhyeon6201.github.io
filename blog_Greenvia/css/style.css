@@ -168,9 +168,12 @@ header .banner div button:hover {
   }
 }
 
+section#function {
+  margin: 3rem 0;
+}
 section#function ul {
   width: 50%;
-  margin: 2.5rem auto;
+  margin: 3rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -229,7 +232,7 @@ section#function ul li img {
 }
 
 section#apply {
-  margin: 1.5rem;
+  margin-bottom: 3rem;
 }
 section#apply h3 {
   font-size: 1.5rem;
@@ -296,13 +299,13 @@ section#apply div {
 section#apply div button {
   margin: 1.5rem;
   color: #105f1b;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  width: 300px;
-  height: 60px;
+  width: 430px;
+  height: 80px;
   background-color: #fff;
   border: 3px solid #ffc107;
-  border-radius: 5px;
+  border-radius: 10px;
   -webkit-box-shadow: 2px 2px 30px #ddd;
           box-shadow: 2px 2px 30px #ddd;
 }

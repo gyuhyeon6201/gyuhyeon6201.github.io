@@ -158,9 +158,10 @@ header {
 
 // 구성&설명 박스
 section#function {
+    margin: 3rem 0;
     ul {
         width: 50%;
-        margin: 2.5rem auto;
+        margin: 3rem auto;
         @include flex();
         gap: 1rem;
         @include mobile {
@@ -195,7 +196,7 @@ section#function {
 
 // 신청하기란
 section#apply {
-    margin: 1.5rem;
+    margin-bottom: 3rem;
     h3 {
         font-size: 1.5rem;
         border-top: 2px solid $dark-color;
@@ -231,13 +232,13 @@ section#apply {
         button {
             margin: 1.5rem;
             color: $dark-color;
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: bold;
-            width: 300px;
-            height: 60px;
+            width: 430px;
+            height: 80px;
             background-color: $white-font;
             border: 3px solid $point-color;
-            border-radius: 5px;
+            border-radius: 10px;
             box-shadow: 2px 2px 30px #ddd;
             &:hover {
                 background-color: $point-color;
